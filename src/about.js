@@ -1,5 +1,7 @@
 function about_tab() {
     
+    const content=document.getElementById("content");
+    
     const about = document.createElement('div');
     about.className="page_content";
     about.id="about";
