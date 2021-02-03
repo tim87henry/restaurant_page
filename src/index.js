@@ -7,6 +7,13 @@ const content=document.getElementById("content");
 const navbar = document.createElement('div');
 navbar.id="navbar";
 
+const dark_mode = document.createElement('button');
+dark_mode.innerHTML='<i class="material-icons" id="cancel">dark_mode</i>';
+dark_mode.className="dark_mode";
+dark_mode.id="dark_icon";
+dark_mode.onclick=function() {setDarkMode(event);};
+navbar.appendChild(dark_mode);
+
 const about_title = document.createElement('button');
 about_title.innerHTML="About Us";
 about_title.id="about_title"
@@ -55,4 +62,20 @@ function opentab (e,section) {
     }
     var temp=document.querySelector("#"+section);
     temp.style.display="block";
+}
+
+function setDarkMode (e) {
+    const titles=document.getElementsByClassName("titles");
+    for (var j=0;j<titles.length;j++) {
+        titles[j].classList.toggle("dark_mode_titles")
+    }
+
+    const dark_icon=document.getElementById("dark_icon");
+    dark_icon.classList.toggle("dark_mode_icon");
+    
+    const navbar=document.getElementById("navbar");
+    navbar.classList.toggle("dark_mode_nav");
+    
+    const content=document.getElementById("content");
+    content.classList.toggle("dark_mode_content");
 }
