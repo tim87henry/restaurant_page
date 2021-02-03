@@ -13,7 +13,6 @@ body {
 #navbar {
     height: 8vh;
     display: flex;
-    justify-content: right;
     background: #FFA25B;
     padding:0;
 }
@@ -27,6 +26,28 @@ body {
     width: 150px;
     font-weight: bold;
     height: 8vh;
+    font-family: 'Josefin Sans', sans-serif;
+    align-self: flex-end;   
+    flex: 2;
+}
+
+.dark_mode_titles,.dark_mode_icon,.dark_mode_nav {
+    background: #3e3e3e;
+    color: white;
+}
+
+.dark_mode_content {
+    background: grey;
+    color: white;
+}
+
+.dark_mode {
+    align-self: flex-start;
+    flex: 1;
+    height: 8vh;
+    background: #FFA25B;
+    border: 0;
+    cursor: pointer;
 }
 
 .titles:hover, #about_title {
