@@ -10,7 +10,7 @@ function about_tab() {
     about_text.innerHTML="<br>"+"Pazzo's Cafe is an authentic Italian cafe, established in the 5th century BC."+"<br>"+
     "We even sold take-away Lattes to Cleopatra and Julius Ceaser. In fact, we invented coffee."+"<br>"+"<br>"+"<br>"+
     "Trading Hours"+"<br>"+
-    "<table id=\"trading\">"+
+    "<table class=\"trading\">"+
     "<tr><td>Mon – Thu</td><td>07.00am – 5.00pm</td></tr>"+
     "<tr><td>Fri – Sat</td><td>08.00am – 8.00pm</td></tr>"+
     "<tr><td>Sun</td><td>08.00am – 1.00pm</td></tr>"+

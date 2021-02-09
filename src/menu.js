@@ -5,7 +5,7 @@ function menu_tab() {
     menu.id="menu";
     const menu_items = document.createElement('div');
     menu_items.innerHTML="<br>"+
-    "<table id=\"menu_list\">"+
+    "<table class=\"menu_list\">"+
     "<tr><td class=\"menu_item\">Latte</td><td class=\"cost\">$5.00</td></tr>"+
     "<tr><td class=\"menu_item\">Capuccino</td><td class=\"cost\">$5.50</td></tr>"+
     "<tr><td class=\"menu_item\">Espresso</td><td class=\"cost\">$4.50</td></tr>"+

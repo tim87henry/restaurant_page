@@ -2,15 +2,15 @@ import about_tab from './about';
 import menu_tab from './menu';
 import contact_tab from './contact';
 
+var night=false;
 const content=document.getElementById("content");
 
 const navbar = document.createElement('div');
-navbar.id="navbar";
+navbar.className="navbar";
 
 const dark_mode = document.createElement('button');
 dark_mode.innerHTML='<i class="material-icons" id="cancel">dark_mode</i>';
 dark_mode.className="dark_mode";
-dark_mode.id="dark_icon";
 dark_mode.onclick=function() {setDarkMode(event);};
 navbar.appendChild(dark_mode);
 
@@ -50,8 +50,13 @@ function opentab (e,section) {
 
     titles=document.getElementsByClassName("titles");
     for (var j=0;j<titles.length;j++) {
-        titles[j].style.background="#FFA25B";
-        titles[j].style.color="black";
+        if (night) {
+            titles[j].style.background="#3e3e3e";
+            titles[j].style.color="white";
+        } else {
+            titles[j].style.background="#FFA25B";
+            titles[j].style.color="black";
+        }
     }
     e.target.style.background="#3e3e3e";
     e.target.style.color="white";
@@ -65,17 +70,42 @@ function opentab (e,section) {
 }
 
 function setDarkMode (e) {
+
+    night=night? false:true;
     const titles=document.getElementsByClassName("titles");
+    for (var j=0;j<titles.length;j++) {
+        if (night) {
+            titles[j].style.background="#3e3e3e";
+            titles[j].style.color="white";
+        } else {
+            titles[j].style.background="#FFA25B";
+            titles[j].style.color="black";
+        }
+    }
     for (var j=0;j<titles.length;j++) {
         titles[j].classList.toggle("dark_mode_titles")
     }
 
-    const dark_icon=document.getElementById("dark_icon");
+    const dark_icon=document.querySelector(".dark_mode");
     dark_icon.classList.toggle("dark_mode_icon");
+    if (night) {
+        dark_icon.style.background="#3e3e3e";
+    } else {
+        dark_icon.style.background="#FFA25B";
+    }
     
-    const navbar=document.getElementById("navbar");
+    const navbar=document.querySelector(".navbar");
     navbar.classList.toggle("dark_mode_nav");
     
     const content=document.getElementById("content");
     content.classList.toggle("dark_mode_content");
+
+    const content1=document.querySelector(".page_content");
+    content1.classList.toggle("dark_page_content");
+
+    const menu=document.querySelector("#menu");
+    menu.classList.toggle("dark_page_content");
+
+    const contact=document.querySelector("#contact");
+    contact.classList.toggle("dark_page_content");
 }
