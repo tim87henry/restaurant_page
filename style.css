@@ -3,14 +3,14 @@ body {
     background-image: url(../coffee.jpg);
 }
 
-#content {
+.content {
     background: #F6E7C1;
     width: 75%;
     margin-left: auto;
     margin-right: auto;
 }
 
-#navbar {
+.navbar {
     height: 8vh;
     display: flex;
     background: #FFA25B;
@@ -50,7 +50,7 @@ body {
     cursor: pointer;
 }
 
-.titles:hover, #about_title {
+#about_title {
     background: #3e3e3e;
     color: rgb(248, 244, 234);
 }
@@ -81,27 +81,39 @@ button::-moz-focus-inner {
     margin-right: auto;
 }
 
-#trading {
+.dark_page_content {
+    margin-top: 0;
+    background: grey;
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    height: 58vh;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trading {
     margin: 0 auto;
 }
 
-#trading td {
+.trading td {
     padding-right: 10px;
 }
 
-#menu_list {
+.menu_list {
     margin: 0 auto;
     font-size: 18px;
 }
 
-#menu_list td {
+.menu_list td {
     padding-right: 10px;
 }
 
-#menu_list .menu_item {
+.menu_list .menu_item {
     padding-right: 200px;
 }
 
-#menu_list .cost {
+.menu_list .cost {
     text-align: right;
 }
