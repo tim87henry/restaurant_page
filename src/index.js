@@ -37,7 +37,7 @@ content.appendChild(navbar);
 
 const banner = document.createElement('img');
 banner.id="banner";
-banner.src= "../banner.png";
+banner.src= "https://raw.githubusercontent.com/tim87henry/restaurant_page/master/banner.png";
 content.appendChild(banner);
 
 about_tab();
